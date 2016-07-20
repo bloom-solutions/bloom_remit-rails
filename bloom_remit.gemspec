@@ -9,10 +9,8 @@ Gem::Specification.new do |s|
   s.version     = BloomRemit::VERSION
   s.authors     = ["Ramon Tayag"]
   s.email       = ["ramon.tayag@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BloomRemit."
-  s.description = "TODO: Description of BloomRemit."
-  s.license     = "MIT"
+  s.homepage    = "https://github.com/imacchiato/bloom_remit-rails"
+  s.summary     = "Rails engine for Bloom Remit users"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -20,4 +18,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.5.1"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
 end
