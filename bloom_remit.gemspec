@@ -16,7 +16,15 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.5.1"
+  s.add_dependency "pg"
+  s.add_dependency "storext"
+  s.add_dependency "bloom_remit_client"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "factory_girl_rails"
+  s.add_development_dependency "storext-matchers"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "webmock"
+  s.add_development_dependency "dotenv"
 end

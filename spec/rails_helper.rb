@@ -1,8 +1,14 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-SPEC_DIR = File.dirname(__FILE__)
-DUMMY_DIR = File.join(SPEC_DIR, "dummy")
-require File.join(DUMMY_DIR, "config", "environment")
+
+require "dotenv"
+Dotenv.load
+
+require 'pathname'
+SPEC_DIR = Pathname.new(File.dirname(__FILE__))
+DUMMY_DIR = SPEC_DIR.join("dummy")
+require DUMMY_DIR.join("config", "environment")
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
@@ -22,7 +28,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[SPEC_DIR.join('support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
