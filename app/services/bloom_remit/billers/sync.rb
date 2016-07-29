@@ -4,8 +4,10 @@ module BloomRemit
 
       def self.call
         client = BloomRemitClient.new(
-          token: ENV["BLOOM_REMIT_TOKEN"],
-          secret: ENV["BLOOM_REMIT_SECRET"],
+          token: BloomRemit.token,
+          secret: BloomRemit.secret,
+          agent_id: BloomRemit.agent_id,
+          url: BloomRemit.url,
         )
         client.billers.billers.each do |remote_biller|
           biller = Biller.where(slug: remote_biller.slug).first_or_initialize

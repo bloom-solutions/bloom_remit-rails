@@ -2,7 +2,7 @@
 ENV['RAILS_ENV'] ||= 'test'
 
 require "dotenv"
-Dotenv.load
+Dotenv.load(".env.local")
 
 require 'pathname'
 SPEC_DIR = Pathname.new(File.dirname(__FILE__))

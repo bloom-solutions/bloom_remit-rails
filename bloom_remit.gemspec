@@ -15,10 +15,12 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.5.1"
+  s.add_dependency "rails", "~> 4.2"
   s.add_dependency "pg"
   s.add_dependency "storext"
   s.add_dependency "bloom_remit_client"
+  s.add_dependency "sidekiq"
+  s.add_dependency "sidekiq-cron"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
@@ -27,4 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock"
   s.add_development_dependency "dotenv"
+  s.add_development_dependency "rspec-sidekiq"
 end
