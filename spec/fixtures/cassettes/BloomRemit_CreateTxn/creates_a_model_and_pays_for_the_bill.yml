@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 01 Aug 2016 02:58:51 GMT
+      - Mon, 01 Aug 2016 23:43:28 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -33,13 +33,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6650ead95619c7ae3379d87376bee87f"
+      - W/"39cb5852b95a8fb07c6d4bcd12a4936a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a36f7ecf-3270-467e-8a27-1fc4e3edea25
+      - 6bdc3378-ccbc-4a23-9152-653c72632674
       X-Runtime:
-      - '0.110504'
+      - '0.332707'
       Strict-Transport-Security:
       - max-age=31536000
       Transfer-Encoding:
@@ -48,10 +48,8 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '[{"slug":"PRIMEWATER","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
-        Reference Number","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"DIGITEL","service_charge":"0.0","first_field":"Account
-        Number *(10-DIGIT)","first_field_format":"Numeric","first_field_width":16,"second_field":"2
+      string: '[{"slug":"DIGITEL","service_charge":"0.0","first_field":"Account Number
+        *(10-DIGIT)","first_field_format":"Numeric","first_field_width":16,"second_field":"2
         Digit AreaCode + Telephone Numbe","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"SUNCELLULAR","service_charge":"0.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":16,"second_field":"11
         Digit Mobile Number","second_field_format":"Numeric","second_field_width":11},{"slug":"G-NET","service_charge":"0.0","first_field":"Account
@@ -84,21 +82,21 @@ http_interactions:
         No. (dash \"-\" included)","first_field_format":"Numeric","first_field_width":11,"second_field":"Customer
         Name","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"PLDT","service_charge":"0.0","first_field":"Account
         Number *(10-DIGIT)","first_field_format":"Numeric","first_field_width":10,"second_field":"2
-        Digit AreaCode + Telephone Number","second_field_format":"Numeric","second_field_width":10},{"slug":"GLOBELINES","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":10,"second_field":"Subscriber
-        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"SMART","service_charge":"0.0","first_field":"Account
+        Digit AreaCode + Telephone Number","second_field_format":"Numeric","second_field_width":10},{"slug":"SMART","service_charge":"0.0","first_field":"Account
         Number *(10-DIGIT)","first_field_format":"Numeric","first_field_width":10,"second_field":"11
-        Digit Mobile No / Service Reference No","second_field_format":"Numeric","second_field_width":16},{"slug":"MANILAWATER","service_charge":"0.0","first_field":"Contract
+        Digit Mobile No / Service Reference No","second_field_format":"Numeric","second_field_width":16},{"slug":"GHPHONE","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":8,"second_field":"Subscriber
+        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"MANILAWATER","service_charge":"0.0","first_field":"Contract
         Account Number","first_field_format":"Numeric","first_field_width":8,"second_field":"Subscriber
         Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"MAYNILAD","service_charge":"0.0","first_field":"Contract
         Account Number","first_field_format":"Numeric","first_field_width":8,"second_field":"Subscriber
-        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"GHPHONE","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":8,"second_field":"Subscriber
+        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"GLOBELINES","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":10,"second_field":"Subscriber
         Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"CABLELINK","service_charge":"0.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":16,"second_field":"Subscriber
-        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"HOME_LIPA_CABLE","service_charge":"0.0","first_field":"2
-        Digit Area Code + Accnt No","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
-        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"TARLAC_CABLE","service_charge":"0.0","first_field":"2
+        Name  (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"PRIMEWATER","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
+        Reference Number","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"TARLAC_CABLE","service_charge":"0.0","first_field":"2
         Digit Area Code + Accnt No","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
         Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"SORSOGON_WATER","service_charge":"8.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":10,"second_field":"Customer
@@ -144,9 +142,9 @@ http_interactions:
         Digit Area Code + Accnt No","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
         Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"ISLA_CABLE","service_charge":"0.0","first_field":"2
         Digit Area Code + Accnt No","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
-        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"VERDANT_CABLE","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
-        Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"LEISURE_WORLD","service_charge":"0.0","first_field":"Account
+        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"HOME_LIPA_CABLE","service_charge":"0.0","first_field":"2
+        Digit Area Code + Accnt No","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
+        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"LEISURE_WORLD","service_charge":"0.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
         Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"RMG","service_charge":"0.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
@@ -196,9 +194,9 @@ http_interactions:
         Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
         Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"NORTHSTAR_CABLE","service_charge":"0.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
-        Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"HITECH_CABLE","service_charge":"7.0","first_field":"Account
-        No.","first_field_format":"Numeric","first_field_width":13,"second_field":"Subscriber
-        Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"PRIMECAST_CABLE","service_charge":"7.0","first_field":"Account
+        Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"VERDANT_CABLE","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":12,"second_field":"ATM
+        Reference No.","second_field_format":"Numeric","second_field_width":10},{"slug":"PRIMECAST_CABLE","service_charge":"7.0","first_field":"Account
         No.","first_field_format":"Numeric","first_field_width":13,"second_field":"Subscriber
         Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"DARAGA_WATER","service_charge":"8.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
@@ -246,11 +244,9 @@ http_interactions:
         No.","first_field_format":"Numeric","first_field_width":13,"second_field":"Subscriber
         Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"CENTRAL_LUZON_CABLE","service_charge":"7.0","first_field":"Account
         No.","first_field_format":"Numeric","first_field_width":13,"second_field":"Subscriber
-        Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"ILECO1","service_charge":"5.0","first_field":"Consumer
-        ID","first_field_format":"Numeric","first_field_width":10,"second_field":"Bill
-        Number (accept exact amount on or before due date only)","second_field_format":"Numeric","second_field_width":10},{"slug":"CHINATRUST","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":16,"second_field":"Customer
-        Full Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"AXA_PHIL","service_charge":"0.0","first_field":"Policy
+        Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"HITECH_CABLE","service_charge":"7.0","first_field":"Account
+        No.","first_field_format":"Numeric","first_field_width":13,"second_field":"Subscriber
+        Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"AXA_PHIL","service_charge":"0.0","first_field":"Policy
         No.","first_field_format":"Numeric","first_field_width":10,"second_field":"First
         Name + Last Name + Contact No","second_field_format":"Alphanumeric","second_field_width":40},{"slug":"DRAGONPAY","service_charge":"0.0","first_field":"Reference
         Number","first_field_format":"Alphanumeric","first_field_width":8,"second_field":"Subscriber
@@ -260,11 +256,15 @@ http_interactions:
         Number","first_field_format":"Alphanumeric","first_field_width":6,"second_field":"Subscriber
         Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"MABALACAT_WATER","service_charge":"8.0","first_field":"Account
         Number","first_field_format":"Alphanumeric","first_field_width":7,"second_field":"Subscriber
-        Name","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"SKYCABLE","service_charge":"0.0","first_field":"Account
-        Number","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
-        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"NEECO2_AREA2","service_charge":"5.0","first_field":"Account
+        Name","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"NEECO2_AREA2","service_charge":"5.0","first_field":"Account
         Number","first_field_format":"Numeric","first_field_width":10,"second_field":"Subscriber
-        Name","second_field_format":"Alphanumeric","second_field_width":30}]'
+        Name","second_field_format":"Alphanumeric","second_field_width":30},{"slug":"SKYCABLE","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":9,"second_field":"Subscriber
+        Name (ex. JDELACRUZ)","second_field_format":"Alphanumeric","second_field_width":16},{"slug":"ILECO1","service_charge":"5.0","first_field":"Consumer
+        ID","first_field_format":"Numeric","first_field_width":10,"second_field":"Bill
+        Number (accept exact amount on or before due date only)","second_field_format":"Numeric","second_field_width":10},{"slug":"CHINATRUST","service_charge":"0.0","first_field":"Account
+        Number","first_field_format":"Numeric","first_field_width":16,"second_field":"Customer
+        Full Name","second_field_format":"Alphanumeric","second_field_width":30}]'
     http_version: 
-  recorded_at: Mon, 01 Aug 2016 02:51:28 GMT
+  recorded_at: Mon, 01 Aug 2016 23:43:29 GMT
 recorded_with: VCR 3.0.3
