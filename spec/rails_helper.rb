@@ -62,4 +62,14 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.before(:each) do
+    BloomRemit.configure do |c|
+      c.token = ENV["BLOOM_REMIT_TOKEN"]
+      c.secret = ENV["BLOOM_REMIT_SECRET"]
+      c.url = ENV["BLOOM_REMIT_URL"]
+      c.agent_id = ENV["BLOOM_REMIT_AGENT_ID"]
+      c.sender_id_method = c.sender_id_method_default
+    end
+  end
 end
