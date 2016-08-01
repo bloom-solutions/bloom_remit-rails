@@ -24,7 +24,7 @@ end
 Then, to make a txn (see `spec/services/bloom_remit/create_txn_spec.rb` for more details):
 
 ```ruby
-txn = CreateTxn.(
+txn = BloomRemit::CreateTxn.(
   recipient: biller,
   sender: user,
   amount: 800.0,
