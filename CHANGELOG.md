@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Factories that developers can require (`require 'bloom_remit/factories'`) for development
+- Add a way to hook into the update of `BloomRemit::Txn` (`BloomRemit.on_txn_update`)
+- Add `Txn#owner` to assign the Txn to a commercial document (like a "payment" in the native app)
+
+### Changed
+- `Txn#sender_id` is now a string, to support sender tables that use strings as primary keys
+- Pass `target_slug` into `BloomRemit::Txn` instead of the recipient. Target slug may be the slug of the billers, or banks
+
+### Removed
+- `Txn#recipient`. We do not need this polymorphic relationship; only the `target_slug`
+- Native biller syncing. Let the app users create their own biller tables and call `BloomRemitClient`
 
 ## [0.0.1] - 2016-08-02
 ### Added

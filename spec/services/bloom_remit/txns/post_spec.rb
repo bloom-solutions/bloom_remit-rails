@@ -4,15 +4,12 @@ module BloomRemit
   module Txns
     RSpec.describe Post do
 
-      let(:biller) do
-        build_stubbed(:bloom_remit_biller, slug: "PLDT")
-      end
       let(:user) do
         build_stubbed(:bloom_remit_dummy_user, bloom_remit_id: "sender-id")
       end
       let(:txn) do
         build_stubbed(:bloom_remit_txn, {
-          recipient: biller,
+          target_slug: "PLDT",
           sender: user,
           amount: BigDecimal.new(2000),
           account_name: "029925252",
@@ -32,7 +29,7 @@ module BloomRemit
           callback_url: callback_url,
           dest_currency: "PHP",
           orig_currency: "PHP",
-          payout_method: biller.slug,
+          payout_method: "PLDT",
           receivable_in_dest_currency: BigDecimal.new(2000),
         )
 

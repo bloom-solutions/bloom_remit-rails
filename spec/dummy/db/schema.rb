@@ -11,32 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160729085500) do
+ActiveRecord::Schema.define(version: 20160805095308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
-  create_table "bloom_remit_billers", force: :cascade do |t|
-    t.string   "slug",                         null: false
-    t.text     "description"
-    t.hstore   "fields"
-    t.decimal  "service_charge", default: 0.0, null: false
-    t.datetime "deactivated_at"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+  create_table "billers", force: :cascade do |t|
+    t.string "slug"
   end
 
   create_table "bloom_remit_txns", force: :cascade do |t|
-    t.integer "status",         default: 0, null: false
-    t.string  "recipient_type",             null: false
-    t.string  "recipient_id",               null: false
-    t.integer "sender_id",                  null: false
-    t.string  "sender_type",                null: false
-    t.decimal "amount",                     null: false
+    t.integer "status",       default: 0, null: false
+    t.string  "sender_id",                null: false
+    t.string  "sender_type",              null: false
+    t.decimal "amount",                   null: false
     t.string  "account_name"
     t.string  "account_id"
-    t.uuid    "secret",                     null: false
+    t.uuid    "secret",                   null: false
+    t.string  "target_slug",              null: false
+    t.string  "owner_id"
+    t.string  "owner_type"
+  end
+
+  add_index "bloom_remit_txns", ["owner_id", "owner_type"], name: "index_bloom_remit_txns_on_owner_id_and_owner_type", using: :btree
+
+  create_table "payments", force: :cascade do |t|
   end
 
   create_table "users", force: :cascade do |t|

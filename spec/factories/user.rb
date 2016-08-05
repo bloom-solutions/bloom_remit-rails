@@ -4,4 +4,11 @@ FactoryGirl.define do
 
   end
 
+  factory(:bloom_remit_dummy_sub_user, {
+    class: SubUser,
+    parent: :bloom_remit_dummy_user,
+  }) do
+
+  end
+
 end

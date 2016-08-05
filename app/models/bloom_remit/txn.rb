@@ -1,8 +1,8 @@
 module BloomRemit
   class Txn < ActiveRecord::Base
 
-    belongs_to :recipient, polymorphic: true
     belongs_to :sender, polymorphic: true
+    belongs_to :owner, polymorphic: true
 
     enum status: {
       bank_error: -2,

@@ -15,7 +15,7 @@ module BloomRemit
           callback_url: Engine.routes.url_helpers.api_v1_txn_url(txn),
           dest_currency: "PHP",
           orig_currency: "PHP",
-          payout_method: txn.recipient.slug,
+          payout_method: txn.target_slug,
           receivable_in_dest_currency: txn.amount,
         )
       end

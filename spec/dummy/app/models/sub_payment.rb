@@ -1,0 +1,3 @@
+class SubPayment < Payment
+
+end

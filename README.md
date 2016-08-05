@@ -18,6 +18,7 @@ BloomRemit.configure do |c|
   c.agent_id = ENV["BLOOM_REMIT_AGENT_ID"]
   c.url = ENV["BLOOM_REMIT_URL"]
   # c.sender_id_method = :external_id
+  c.on_txn_update # OnTxnUpdate
 end
 ```
 
@@ -34,6 +35,18 @@ txn = BloomRemit::CreateTxn.(
 ```
 
 In the configuration, `sender_method_id` defaults to `:bloom_remit_id`. This is the method that is called on the `sender` record on a Txn to find out what the sender's ID is. The value of this column keeps track of the ID of the sender on the Bloom Remit system.
+
+### Callbacks
+
+- `on_txn_update` - this calls the class set whenever your app gets an update from Bloom Remit. It responds to call, and accepts the `txn`:
+
+```ruby
+class OnTxnUpdate
+  def self.call(txn)
+    # Do something
+  end
+end
+```
 
 ## Factory Girl
 

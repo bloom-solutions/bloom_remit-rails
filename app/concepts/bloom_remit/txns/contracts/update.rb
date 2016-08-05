@@ -3,6 +3,7 @@ module BloomRemit
     module Contracts
       class Update < Reform::Form
 
+        model ::BloomRemit::Txn
         property :status
 
       end

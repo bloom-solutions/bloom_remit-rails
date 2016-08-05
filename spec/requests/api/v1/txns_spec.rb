@@ -3,7 +3,10 @@ require 'rails_helper'
 RSpec.describe "api/v1/txns" do
 
   describe "#update" do
-    let(:txn) { create(:bloom_remit_txn, secret: SecureRandom.uuid) }
+    let(:user) { create(:bloom_remit_dummy_user) }
+    let(:txn) do
+      create(:bloom_remit_txn, secret: SecureRandom.uuid, sender: user)
+    end
     let(:headers) do
       {
         "ACCEPT" => "application/json",
@@ -16,7 +19,7 @@ RSpec.describe "api/v1/txns" do
         BloomRemit::Engine.routes.url_helpers.api_v1_txn_url(txn),
         {
           secret: "fake",
-          txn: {status: "doesn't matter"}
+          status: "doesn't matter",
         }.to_json,
         headers
       )
@@ -25,7 +28,8 @@ RSpec.describe "api/v1/txns" do
       patch(
         BloomRemit::Engine.routes.url_helpers.api_v1_txn_url(txn),
         {
-          secret: txn.secret, txn: {status: "paid"}
+          secret: txn.secret,
+          status: "paid",
         }.to_json,
         headers
       )
