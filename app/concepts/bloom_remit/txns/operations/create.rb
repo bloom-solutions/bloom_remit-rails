@@ -9,7 +9,9 @@ module BloomRemit
         contract Contracts::Create
 
         include Dispatch
-        callback :after_create, Callbacks::AfterCreate
+        callback :after_create do
+          on_change :after_create
+        end
 
         def process(params)
           validate(params[:txn]) do |f|
@@ -17,6 +19,12 @@ module BloomRemit
             f.save
             dispatch! :after_create
           end
+        end
+
+        private
+
+        def after_create(model, opts)
+          PayoutJob.perform_async(model)
         end
 
       end
