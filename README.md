@@ -35,6 +35,10 @@ txn = BloomRemit::CreateTxn.(
 
 In the configuration, `sender_method_id` defaults to `:bloom_remit_id`. This is the method that is called on the `sender` record on a Txn to find out what the sender's ID is. The value of this column keeps track of the ID of the sender on the Bloom Remit system.
 
+## Factory Girl
+
+You may require the `bloom_remit/factories` file if you need access to this gem's factories (easier application development).
+
 ## Development
 
 - In `spec/dummy/config`, copy `database.yml.sample` to `database.yml` and fill in your db details
