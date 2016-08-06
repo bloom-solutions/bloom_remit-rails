@@ -8,6 +8,8 @@ module BloomRemit
         with(txn: txn).reduce(
           InitializeClient,
           Post,
+          HandleResponse,
+          RunHook,
         )
       end
 

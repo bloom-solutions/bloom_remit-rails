@@ -18,7 +18,7 @@ BloomRemit.configure do |c|
   c.agent_id = ENV["BLOOM_REMIT_AGENT_ID"]
   c.url = ENV["BLOOM_REMIT_URL"]
   # c.sender_id_method = :external_id
-  c.on_txn_update # OnTxnUpdate
+  # c.on_txn_response = OnBloomRemitTxnResponse # See Callbacks for more info
 end
 ```
 
@@ -38,11 +38,11 @@ In the configuration, `sender_method_id` defaults to `:bloom_remit_id`. This is 
 
 ### Callbacks
 
-- `on_txn_update` - this calls the class set whenever your app gets an update from Bloom Remit. It responds to call, and accepts the `txn`:
+- `on_txn_response` - this calls the class set whenever your app gets an update from Bloom Remit. It responds to call, and accepts the `txn`:
 
 ```ruby
-class OnTxnUpdate
-  def self.call(txn)
+class OnTxnResponse
+  def self.call(txn, body_or_params)
     # Do something
   end
 end

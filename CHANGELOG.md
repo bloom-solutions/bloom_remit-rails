@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - `Txn#sender_id` is now a string, to support sender tables that use strings as primary keys
 - Pass `target_slug` into `BloomRemit::Txn` instead of the recipient. Target slug may be the slug of the billers, or banks
+- Drop `BloomRemit.on_txn_update` and change to `BloomRemit.on_txn_response`, which will be executed anytime the server responds with something.
 
 ### Fixed
 - Enqueueing of Txn PayoutJob

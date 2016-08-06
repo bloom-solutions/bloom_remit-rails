@@ -3,6 +3,7 @@ module BloomRemit
 
     belongs_to :sender, polymorphic: true
     belongs_to :owner, polymorphic: true
+    has_many :responses, class_name: "BloomRemit::Response", dependent: :destroy
 
     enum status: {
       bank_error: -2,

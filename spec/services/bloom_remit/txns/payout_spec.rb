@@ -8,6 +8,8 @@ module BloomRemit
         actions = [
           InitializeClient,
           Post,
+          HandleResponse,
+          RunHook,
         ]
 
         txn = build_stubbed(:bloom_remit_txn)

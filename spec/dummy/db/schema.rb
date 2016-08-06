@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806012210) do
+ActiveRecord::Schema.define(version: 20160806054012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20160806012210) do
   create_table "billers", force: :cascade do |t|
     t.string "slug"
   end
+
+  create_table "bloom_remit_responses", force: :cascade do |t|
+    t.integer  "txn_id",     null: false
+    t.text     "body",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bloom_remit_responses", ["txn_id"], name: "index_bloom_remit_responses_on_txn_id", using: :btree
 
   create_table "bloom_remit_txns", force: :cascade do |t|
     t.integer "status",       default: 0, null: false

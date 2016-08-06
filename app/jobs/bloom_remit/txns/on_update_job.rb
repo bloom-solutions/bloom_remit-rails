@@ -5,9 +5,9 @@ module BloomRemit
       include Sidekiq::Worker
       sidekiq_options retry: false
 
-      def perform(txn_id)
+      def perform(txn_id, params)
         txn = Txn.find(txn_id)
-        OnUpdate.(txn)
+        OnUpdate.(txn, params)
       end
 
     end

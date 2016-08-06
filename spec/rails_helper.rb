@@ -8,7 +8,6 @@ require 'pathname'
 SPEC_DIR = Pathname.new(File.dirname(__FILE__))
 DUMMY_DIR = SPEC_DIR.join("dummy")
 require DUMMY_DIR.join("config", "environment")
-require SPEC_DIR.join("fixtures", "txn_update.rb")
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?

@@ -17,9 +17,10 @@ module BloomRemit
         })
       end
       let(:callback_url) do
-        Engine.routes.url_helpers.api_v1_txn_url(txn)
+        Engine.routes.url_helpers.api_v1_txn_url(txn, secret: txn.secret)
       end
       let(:client) { instance_double(BloomRemitClient::Client) }
+      let(:response) { build(:bloom_remit_client_create_payment_response) }
 
       it "posts the txn to Bloom Remit" do
         expect(client).to receive(:create_payment).with(
@@ -30,10 +31,13 @@ module BloomRemit
           dest_currency: "PHP",
           orig_currency: "PHP",
           payout_method: "PLDT",
+          paid_in_orig_currency: BigDecimal.new(2000),
           receivable_in_dest_currency: BigDecimal.new(2000),
-        )
+        ).and_return(response)
 
-        described_class.execute(txn: txn, client: client)
+        resulting_ctx = described_class.execute(txn: txn, client: client)
+
+        expect(resulting_ctx.remote_response).to eq response
       end
 
     end

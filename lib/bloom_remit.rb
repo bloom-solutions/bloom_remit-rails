@@ -22,7 +22,7 @@ module BloomRemit
   mattr_accessor :agent_id
   mattr_accessor :url
   mattr_reader :sender_id_method_default
-  mattr_accessor :on_txn_update
+  mattr_accessor :on_txn_response
   @@sender_id_method_default = :bloom_remit_id
   mattr_accessor :sender_id_method
   self.sender_id_method = self.sender_id_method_default
