@@ -36,7 +36,9 @@ module BloomRemit
         end
 
         def after_update(form, opts)
-          OnUpdateJob.perform_async(form.model.id)
+          ActiveRecord::Base.after_transaction do
+            OnUpdateJob.perform_async(form.model.id)
+          end
         end
 
       end

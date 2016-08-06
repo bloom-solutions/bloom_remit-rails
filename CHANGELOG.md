@@ -14,7 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Enqueueing of Txn PayoutJob
-- Enqueue PayoutJob only when database change has been committed
+- Enqueue jobs only when database change has been committed
 
 ### Removed
 - `Txn#recipient`. We do not need this polymorphic relationship; only the `target_slug`
