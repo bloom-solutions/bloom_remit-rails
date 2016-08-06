@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `Txn#sender_id` is now a string, to support sender tables that use strings as primary keys
 - Pass `target_slug` into `BloomRemit::Txn` instead of the recipient. Target slug may be the slug of the billers, or banks
 
+### Fixed
+- Enqueueing of Txn PayoutJob
+
 ### Removed
 - `Txn#recipient`. We do not need this polymorphic relationship; only the `target_slug`
 - Native biller syncing. Let the app users create their own biller tables and call `BloomRemitClient`

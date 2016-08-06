@@ -23,8 +23,8 @@ module BloomRemit
 
         private
 
-        def after_create(model, opts)
-          PayoutJob.perform_async(model)
+        def after_create(form, opts)
+          PayoutJob.perform_async(form.model.id)
         end
 
       end
