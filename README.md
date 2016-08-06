@@ -50,7 +50,7 @@ end
 
 ## Factory Girl
 
-You may require the `bloom_remit/factories` file if you need access to this gem's factories (easier application development).
+You may require the `bloom_remit/factories` file if you need access to this gem's factories (easier application development). Requiring this will also require `bloom_remit_client/factories`
 
 ## Development
 
