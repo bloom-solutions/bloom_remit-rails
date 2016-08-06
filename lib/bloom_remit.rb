@@ -1,3 +1,4 @@
+require "ar_after_transaction"
 require "storext"
 require "sidekiq"
 require "light-service"

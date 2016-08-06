@@ -24,7 +24,9 @@ module BloomRemit
         private
 
         def after_create(form, opts)
-          PayoutJob.perform_async(form.model.id)
+          ActiveRecord::Base.after_transaction do
+            PayoutJob.perform_async(form.model.id)
+          end
         end
 
       end

@@ -3,7 +3,7 @@ require 'rails_helper'
 module BloomRemit
   module Txns
     module Operations
-      RSpec.describe Create do
+      RSpec.describe Create, cleaning_strategy: :truncation do
 
         let(:user) { create(:bloom_remit_dummy_sub_user) }
         let(:biller) { create(:bloom_remit_dummy_biller, slug: "PLDT") }
