@@ -5,6 +5,11 @@ module BloomRemit
 
         respond_to :json
 
+        def post_update
+          op = Txns::Operations::Update.(params)
+          render json: op.model
+        end
+
         def update
           respond Txns::Operations::Update
         end

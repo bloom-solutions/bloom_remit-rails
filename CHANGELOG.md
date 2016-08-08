@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Support POST for updating the Txn
+
 ## [0.1.0] - 2016-08-06
 ### Added
 - Factories that developers can require (`require 'bloom_remit/factories'`) for development
