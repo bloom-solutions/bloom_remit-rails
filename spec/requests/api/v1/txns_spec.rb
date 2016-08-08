@@ -23,7 +23,6 @@ RSpec.describe "api/v1/txns" do
         }.to_json,
         headers
       )
-      puts response.body
       expect(response.status).to be 404
 
       post(
