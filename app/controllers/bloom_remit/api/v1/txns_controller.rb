@@ -1,7 +1,7 @@
 module BloomRemit
   module Api
     module V1
-      class TxnsController < ApplicationController
+      class TxnsController < ::BloomRemit::ApplicationController
 
         respond_to :json
 
