@@ -6,6 +6,14 @@
 - `bundle`
 - `rake bloom_remit:install:migrations`
 - `rake db:migrate`
+- Add `mount BloomRemit::Engine => "/bloom_remit"` to your app's routes:
+
+```ruby
+Rails.application.routes.draw do
+  mount BloomRemit::Engine => "/bloom_remit"
+  # others ...
+end
+```
 
 ## Configuration
 
