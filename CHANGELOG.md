@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Change migration name to include "bloom_remit" to avoid conflicts
+
 ## [0.3.0] - 2016-08-08
 ### Changed
 - Require that `Txn#external_id` is set
