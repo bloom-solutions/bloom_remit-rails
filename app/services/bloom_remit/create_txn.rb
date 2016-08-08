@@ -1,7 +1,15 @@
 module BloomRemit
   class CreateTxn
 
-    def self.call(target_slug:, sender:, owner:, amount:, account_name:, account_id:)
+    def self.call(
+      target_slug:,
+      sender:,
+      owner:,
+      amount:,
+      account_name:,
+      account_id:,
+      external_id:
+    )
       Txns::Operations::Create.(txn: {
         sender_id: sender.id,
         sender_type: sender.class.base_class.name,
@@ -11,6 +19,7 @@ module BloomRemit
         target_slug: target_slug,
         owner_id: owner.id,
         owner_type: owner.class.base_class.name,
+        external_id: external_id,
       })
     end
 

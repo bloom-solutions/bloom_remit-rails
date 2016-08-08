@@ -12,6 +12,9 @@ module BloomRemit
         property :target_slug
         property :owner_id
         property :owner_type
+        property :external_id
+
+        validates :external_id, presence: true
 
       end
     end

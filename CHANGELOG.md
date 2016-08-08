@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Require that `Txn#external_id` is set
+
 ## [0.2.1] - 2016-08-08
 ### Fixed
 - Do not check CSRF token for API

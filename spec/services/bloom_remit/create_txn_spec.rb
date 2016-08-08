@@ -3,6 +3,8 @@ require 'rails_helper'
 module BloomRemit
   RSpec.describe CreateTxn, vcr: {record: :once} do
 
+    let(:external_id) { SecureRandom.hex(12) }
+
     it "creates a model and pays for the bill" do
       BloomRemit.configure do |c|
         c.token = ENV["BLOOM_REMIT_TOKEN"]
@@ -22,6 +24,7 @@ module BloomRemit
         account_name: "028109090",
         account_id: "Hooli X",
         owner: payment,
+        external_id: external_id,
       ).model
 
       expect(txn).to be_incomplete
@@ -30,6 +33,7 @@ module BloomRemit
       expect(txn.sender_id).to eq user.id.to_s
       expect(txn.owner_type).to eq "Payment"
       expect(txn.owner_id).to eq payment.id.to_s
+      expect(txn.external_id).to eq external_id
     end
 
   end

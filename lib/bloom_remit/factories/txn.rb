@@ -4,6 +4,7 @@ FactoryGirl.define do
     target_slug "TARGET_SLUG"
     amount 2500
     secret { SecureRandom.uuid }
+    external_id { SecureRandom.hex(12) }
   end
 
 end

@@ -21,6 +21,7 @@ module BloomRemit
           payout_method: txn.target_slug,
           paid_in_orig_currency: txn.amount,
           receivable_in_dest_currency: txn.amount,
+          external_id: txn.external_id,
         )
       end
 

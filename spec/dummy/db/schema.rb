@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806054012) do
+ActiveRecord::Schema.define(version: 20160808081300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20160806054012) do
     t.string  "target_slug",              null: false
     t.string  "owner_id"
     t.string  "owner_type"
+    t.string  "external_id",              null: false
   end
 
+  add_index "bloom_remit_txns", ["external_id"], name: "index_bloom_remit_txns_on_external_id", using: :btree
   add_index "bloom_remit_txns", ["owner_id", "owner_type"], name: "index_bloom_remit_txns_on_owner_id_and_owner_type", using: :btree
 
   create_table "payments", force: :cascade do |t|
