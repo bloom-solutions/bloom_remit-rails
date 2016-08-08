@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- Do not check CSRF token for API
+
 ## [0.2.0] - 2016-08-08
 ### Added
 - Support POST for updating the Txn
