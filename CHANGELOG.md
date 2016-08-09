@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Update `Txn#status_description` during callback from Bloom Remit
+
+### Fixed
+- Do not make Txn secret updatable
+
 ## [0.4.1] - 2016-08-08
 ### Fixed
 - Ensure that the `TxnsController` inherits from this engine's `ApplicationController`

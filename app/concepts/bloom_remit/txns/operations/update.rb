@@ -25,10 +25,10 @@ module BloomRemit
 
         def setup_params!(params)
           params[:txn] ||= {}
-          params[:txn].merge!(
-            status: params[:status],
-            secret: params[:secret],
-          )
+          params[:txn].merge!(params.slice(*%i[
+            status
+            status_description
+          ]))
         end
 
         def model!(params)

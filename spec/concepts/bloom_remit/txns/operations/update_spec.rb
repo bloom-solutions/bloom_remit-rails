@@ -9,13 +9,18 @@ module BloomRemit
         let(:txn) { create(:bloom_remit_txn, sender: user) }
 
         it "creates the txn, and triggers BloomRemit.on_txn_update" do
-          op = described_class.
-            (id: txn.id, secret: txn.secret, status: "paid")
+          op = described_class.(
+            id: txn.id,
+            secret: txn.secret,
+            status: "paid",
+            status_description: "My status description",
+          )
           txn = op.model
           expect(txn.status).to eq "paid"
+          expect(txn.status_description).to eq "My status description"
           expect(OnUpdateJob).to have_enqueued_job(txn.id, {
             status: "paid",
-            secret: txn.secret,
+            status_description: "My status description",
           })
         end
 

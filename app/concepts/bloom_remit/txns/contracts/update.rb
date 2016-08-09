@@ -5,6 +5,7 @@ module BloomRemit
 
         model ::BloomRemit::Txn
         property :status
+        property :status_description
 
       end
     end
