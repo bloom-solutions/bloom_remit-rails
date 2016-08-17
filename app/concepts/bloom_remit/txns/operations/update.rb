@@ -28,6 +28,7 @@ module BloomRemit
           params[:txn].merge!(params.slice(*%i[
             status
             status_description
+            vendor_external_id
           ]))
         end
 

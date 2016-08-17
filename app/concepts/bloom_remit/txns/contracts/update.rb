@@ -6,6 +6,7 @@ module BloomRemit
         model ::BloomRemit::Txn
         property :status
         property :status_description
+        property :vendor_external_id
 
       end
     end

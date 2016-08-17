@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809043433) do
+ActiveRecord::Schema.define(version: 20160817003323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "billers", force: :cascade do |t|
     t.string "slug"
+  end
+
+  create_table "bloom_remit_billers", force: :cascade do |t|
+    t.string   "slug",                         null: false
+    t.text     "description"
+    t.hstore   "fields"
+    t.decimal  "service_charge", default: 0.0, null: false
+    t.datetime "deactivated_at"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "bloom_remit_responses", force: :cascade do |t|
@@ -42,10 +53,12 @@ ActiveRecord::Schema.define(version: 20160809043433) do
     t.string  "owner_type"
     t.string  "external_id",                    null: false
     t.text    "status_description"
+    t.string  "vendor_external_id"
   end
 
   add_index "bloom_remit_txns", ["external_id"], name: "index_bloom_remit_txns_on_external_id", using: :btree
   add_index "bloom_remit_txns", ["owner_id", "owner_type"], name: "index_bloom_remit_txns_on_owner_id_and_owner_type", using: :btree
+  add_index "bloom_remit_txns", ["vendor_external_id"], name: "index_bloom_remit_txns_on_vendor_external_id", using: :btree
 
   create_table "payments", force: :cascade do |t|
     t.string "type"
