@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- Specify full constant path to avoid conflicts
+
 ## [0.6.0] - 2016-08-17
 ### Added
 - Update `Txn#vendor_external_id` during callback from Bloom Remit

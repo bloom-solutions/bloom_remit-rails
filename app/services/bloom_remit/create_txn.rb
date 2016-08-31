@@ -10,7 +10,7 @@ module BloomRemit
       account_id:,
       external_id:
     )
-      Txns::Operations::Create.(txn: {
+      ::BloomRemit::Txns::Operations::Create.(txn: {
         sender_id: sender.id,
         sender_type: sender.class.base_class.name,
         amount: amount,
