@@ -1,16 +1,13 @@
 ---
-defaults: &defaults
-  username: ubuntu
-  password:
-
-development:
-  <<: *defaults
+development: &default
   adapter: postgresql
   encoding: unicode
-  database: bloom_remit_rails_development
+  database: postgres
+  pool: 5
+  username: postgres
+  password:
+  host: db
 
 test:
-  <<: *defaults
-  adapter: postgresql
-  encoding: unicode
-  database: bloom_remit_rails_test
+  <<: *default
+  database: app_test

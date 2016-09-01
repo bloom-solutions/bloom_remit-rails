@@ -62,8 +62,19 @@ You may require the `bloom_remit/factories` file if you need access to this gem'
 
 ## Development
 
-- In `spec/dummy/config`, copy `database.yml.sample` to `database.yml` and fill in your db details
 - Copy `.env` to `.env.local` and make it match your credentials
+- Copy `spec/dummy/config/database.yml.sample` to `spec/dummy/config/database.yml`
+- If you use docker:
+  - `docker-compose build`
+  - `docker-compose run test bundle`
+  - `docker-compose run test bundle exec rake db:create db:migrate`
+  - `docker-compose run test bundle exec rspec`
+- If you are not using docker:
+  - Setup your PG database, and fill in the correct credentials in `spec/dummy/config/database.yml`
+  - From `spec/dummy`, `rake db:migrate db:test:prepare`
+  - `bundle install`
+  - `appraisal install`
+  - From the root dir of the gem, `rspec spec`
 
 ## License
 
