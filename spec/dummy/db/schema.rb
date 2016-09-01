@@ -15,20 +15,9 @@ ActiveRecord::Schema.define(version: 20160817003323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "billers", force: :cascade do |t|
     t.string "slug"
-  end
-
-  create_table "bloom_remit_billers", force: :cascade do |t|
-    t.string   "slug",                         null: false
-    t.text     "description"
-    t.hstore   "fields"
-    t.decimal  "service_charge", default: 0.0, null: false
-    t.datetime "deactivated_at"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
   end
 
   create_table "bloom_remit_responses", force: :cascade do |t|

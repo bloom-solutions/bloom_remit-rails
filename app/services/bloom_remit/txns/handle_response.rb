@@ -7,7 +7,9 @@ module BloomRemit
       promises :response
 
       executed do |c|
-        body = c.remote_response.body
+        remote_response = c.remote_response
+        c.txn.error! unless remote_response.success?
+        body = remote_response.body
         c.response = c.txn.responses.create!(body: body)
       end
 

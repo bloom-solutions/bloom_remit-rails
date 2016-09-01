@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- When creation of txn fails, mark Txn as error
+
 ## [0.6.1] - 2016-08-31
 ### Fixed
 - Specify full constant path to avoid conflicts
