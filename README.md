@@ -1,5 +1,7 @@
 # Rails engine for Bloom Remit
 
+[![Build Status](https://travis-ci.org/imacchiato/bloom_remit-rails.svg?branch=master)](https://travis-ci.org/imacchiato/bloom_remit-rails)
+
 ## Installation
 
 - Add `gem "bloom_remit"` to your Gemfile
