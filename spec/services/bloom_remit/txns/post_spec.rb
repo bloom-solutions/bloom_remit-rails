@@ -22,7 +22,7 @@ module BloomRemit
         Engine.routes.url_helpers.api_v1_txn_url(txn, secret: txn.secret)
       end
       let(:client) { instance_double(BloomRemitClient::Client) }
-      let(:response) { build(:bloom_remit_client_create_payment_response) }
+      let(:response) { build(:bloom_remit_client_responses_payments_create) }
 
       it "posts the txn to Bloom Remit" do
         expect(client).to receive(:create_payment).with(

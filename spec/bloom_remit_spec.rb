@@ -6,14 +6,13 @@ RSpec.describe BloomRemit do
     BloomRemit.configure do |c|
       c.token = "token"
       c.secret = "secret"
-      c.url = "https://url.com"
       c.agent_id = "agent_id"
       c.on_txn_response = OnTxnResponse
+      c.sandbox = true
     end
 
     expect(described_class.token).to eq "token"
     expect(described_class.secret).to eq "secret"
-    expect(described_class.url).to eq "https://url.com"
     expect(described_class.agent_id).to eq "agent_id"
     expect(described_class.sender_id_method).to eq :bloom_remit_id
     expect(described_class.on_txn_response).to eq OnTxnResponse

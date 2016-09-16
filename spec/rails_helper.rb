@@ -67,7 +67,7 @@ RSpec.configure do |config|
     BloomRemit.configure do |c|
       c.token = ENV["BLOOM_REMIT_TOKEN"]
       c.secret = ENV["BLOOM_REMIT_SECRET"]
-      c.url = ENV["BLOOM_REMIT_URL"]
+      c.sandbox = true
       c.agent_id = ENV["BLOOM_REMIT_AGENT_ID"]
       c.sender_id_method = c.sender_id_method_default
     end

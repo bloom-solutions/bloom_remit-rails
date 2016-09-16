@@ -20,7 +20,8 @@ module BloomRemit
   mattr_accessor :token
   mattr_accessor :secret
   mattr_accessor :agent_id
-  mattr_accessor :url
+  mattr_accessor :sandbox
+  mattr_accessor :host
   mattr_reader :sender_id_method_default
   mattr_accessor :on_txn_response
   @@sender_id_method_default = :bloom_remit_id

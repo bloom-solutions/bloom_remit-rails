@@ -8,15 +8,15 @@ module BloomRemit
         c.token = "token"
         c.secret = "secret"
         c.agent_id = "agent_id"
-        c.url = "url.com"
+        c.sandbox = true
       end
 
       client = described_class.execute.client
 
-      expect(client.token).to eq "token"
-      expect(client.secret).to eq "secret"
+      expect(client.api_token).to eq "token"
+      expect(client.api_secret).to eq "secret"
       expect(client.agent_id).to eq "agent_id"
-      expect(client.url).to eq "url.com"
+      expect(client.host).to eq BloomRemitClient::STAGING
     end
 
   end

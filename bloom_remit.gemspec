@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2"
   s.add_dependency "pg"
   s.add_dependency "storext"
-  s.add_dependency "bloom_remit_client", ">= 0.4.0"
+  s.add_dependency "bloom_remit_client", ">= 0.7.1"
   s.add_dependency "sidekiq"
   s.add_dependency "sidekiq-cron"
   s.add_dependency "trailblazer"

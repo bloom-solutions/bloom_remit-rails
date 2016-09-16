@@ -10,7 +10,7 @@ module BloomRemit
         c.token = ENV["BLOOM_REMIT_TOKEN"]
         c.secret = ENV["BLOOM_REMIT_SECRET"]
         c.agent_id = ENV["BLOOM_REMIT_AGENT_ID"]
-        c.url = ENV["BLOOM_REMIT_URL"]
+        c.sandbox = true
       end
 
       user = create(:bloom_remit_dummy_sub_user)

@@ -6,7 +6,7 @@ module BloomRemit
 
       context "successful response" do
         let(:remote_response) do
-          build(:bloom_remit_client_create_payment_response, {
+          build(:bloom_remit_client_responses_payments_create, {
             success: true,
             body: {"i" => "am body"},
           })
@@ -25,7 +25,7 @@ module BloomRemit
 
       context "unsuccessful response" do
         let(:remote_response) do
-          build(:bloom_remit_client_create_payment_response, {
+          build(:bloom_remit_client_responses_payments_create, {
             success: false,
             body: {"status"=>"500", "error"=>"Internal Server Error"},
           })

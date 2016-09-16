@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Change `url` configuration setting to `host`
+- Allow to configure `sandbox`, which makes setting of `url` optional
+- Use BloomRemitClient v0.7.1
+
 ## [0.7.0]
 ### Added
 - When creation of txn fails, mark Txn as error

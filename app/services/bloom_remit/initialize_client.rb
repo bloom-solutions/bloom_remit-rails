@@ -6,10 +6,10 @@ module BloomRemit
 
     executed do |c|
       c.client = BloomRemitClient.new(
-        token: BloomRemit.token,
-        secret: BloomRemit.secret,
+        api_token: BloomRemit.token,
+        api_secret: BloomRemit.secret,
         agent_id: BloomRemit.agent_id,
-        url: BloomRemit.url,
+        sandbox: BloomRemit.sandbox,
       )
     end
 
