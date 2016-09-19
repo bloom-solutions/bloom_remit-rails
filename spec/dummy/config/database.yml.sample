@@ -6,7 +6,8 @@ development: &default
   pool: 5
   username: postgres
   password:
-  host: db
+  host: localhost # run ruby on host
+  # host: db # everything via docker services
 
 test:
   <<: *default
