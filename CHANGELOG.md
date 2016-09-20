@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.8.0] - 2016-09-20
 ### Changed
 - Change `url` configuration setting to `host`
 - Allow to configure `sandbox`, which makes setting of `url` optional
