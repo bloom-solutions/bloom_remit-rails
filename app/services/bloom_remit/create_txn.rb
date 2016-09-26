@@ -17,7 +17,6 @@ module BloomRemit
       :owner,
       :amount,
       :account_name,
-      :account_id,
       presence: true
     )
 
