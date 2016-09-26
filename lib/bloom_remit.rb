@@ -1,4 +1,6 @@
 require "ar_after_transaction"
+require "virtus"
+require "active_model"
 require "storext"
 require "sidekiq"
 require "light-service"

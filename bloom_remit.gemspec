@@ -32,6 +32,8 @@ Gem::Specification.new do |s|
   s.add_dependency "representable"
   s.add_dependency "multi_json"
   s.add_dependency "ar_after_transaction"
+  s.add_dependency "virtus"
+  s.add_dependency "activemodel"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
