@@ -14,8 +14,6 @@ module BloomRemit
         property :owner_type
         property :external_id
 
-        validates :external_id, presence: true
-
       end
     end
   end
