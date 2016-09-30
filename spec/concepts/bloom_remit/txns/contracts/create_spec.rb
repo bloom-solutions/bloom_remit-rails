@@ -7,7 +7,6 @@ module BloomRemit
 
         describe "validations" do
           subject { described_class.new(Txn.new) }
-          it { is_expected.to validate_presence_of(:external_id) }
         end
 
       end
