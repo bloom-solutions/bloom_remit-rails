@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.9.0] - 2016-09-30
 ### Changed
 - Do not require `account_id` when creating a txn. Cash pickups do not need this.
 - Do not require `external_id` when creating a txn
