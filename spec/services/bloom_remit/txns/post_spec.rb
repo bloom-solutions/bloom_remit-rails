@@ -25,17 +25,15 @@ module BloomRemit
       let(:response) { build(:bloom_remit_client_responses_payments_create) }
 
       it "posts the txn to Bloom Remit" do
-        expect(client).to receive(:create_payment).with(
+        expect(client).to receive(:create_txn).with(
           sender_id: "sender-id",
           account_name: "029925252",
           account_number: "12345678",
           callback_url: callback_url,
-          dest_currency: "PHP",
-          orig_currency: "PHP",
-          payout_method: "PLDT",
-          paid_in_orig_currency: BigDecimal.new(2000),
-          receivable_in_dest_currency: BigDecimal.new(2000),
-          external_id: external_id,
+          currency: "PHP",
+          target_slug: "PLDT",
+          amount: BigDecimal.new(2000),
+          client_external_id: external_id,
         ).and_return(response)
 
         resulting_ctx = described_class.execute(txn: txn, client: client)

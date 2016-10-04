@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Use unified endpoint for creating transactions
+
 ## [0.9.0] - 2016-09-30
 ### Changed
 - Do not require `account_id` when creating a txn. Cash pickups do not need this.
