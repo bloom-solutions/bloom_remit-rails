@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.13.0] - 2016-10-05
 ### Added
 - All params on Txn update is sent to `OnUpdateJob`
 
