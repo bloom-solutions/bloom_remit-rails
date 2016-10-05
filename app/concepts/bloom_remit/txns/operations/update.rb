@@ -24,12 +24,9 @@ module BloomRemit
         private
 
         def setup_params!(params)
+          txn_params = params.dup
           params[:txn] ||= {}
-          params[:txn].merge!(params.slice(*%i[
-            status
-            status_description
-            tracking_number
-          ]))
+          params[:txn].merge!(txn_params)
         end
 
         def model!(params)

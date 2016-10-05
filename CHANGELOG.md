@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- All params on Txn update is sent to `OnUpdateJob`
+
 ## [0.12.1] - 2016-10-05
 ### Fixed
 - Send recipient_id when posting to BR
