@@ -21,6 +21,7 @@ module BloomRemit
             owner_id: payment.id,
             owner_type: payment.class.base_class.name,
             external_id: external_id,
+            recipient_id: "recipient-id",
           })
           txn = op.model
           expect(txn.target_slug).to eq biller.slug
@@ -30,6 +31,7 @@ module BloomRemit
           expect(txn.account_id).to eq "Hooli X"
           expect(txn.owner).to eq payment
           expect(txn.external_id).to eq external_id
+          expect(txn.recipient_id).to eq "recipient-id"
           expect(PayoutJob).to have_enqueued_job(txn.id)
         end
 

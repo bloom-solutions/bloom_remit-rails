@@ -24,6 +24,7 @@ module BloomRemit
         account_name: "028109090",
         account_id: "Hooli X",
         owner: payment,
+        recipient_id: "recipient-id",
         external_id: external_id,
       ).model
 
@@ -34,6 +35,7 @@ module BloomRemit
       expect(txn.owner_type).to eq "Payment"
       expect(txn.owner_id).to eq payment.id.to_s
       expect(txn.external_id).to eq external_id
+      expect(txn.recipient_id).to eq "recipient-id"
     end
 
   end

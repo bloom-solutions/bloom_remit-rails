@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- `CreateTxn` accepts `recipient_id`
+
 ## [0.11.0] - 2016-10-04
 ### Changed
 - `OnUpdateJob` no longer receives `vendor_external_id`, but rather, `tracking_number`

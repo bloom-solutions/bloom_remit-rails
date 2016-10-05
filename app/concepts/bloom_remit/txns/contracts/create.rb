@@ -13,6 +13,7 @@ module BloomRemit
         property :owner_id
         property :owner_type
         property :external_id
+        property :recipient_id
 
       end
     end

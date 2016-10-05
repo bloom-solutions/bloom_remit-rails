@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930034811) do
+ActiveRecord::Schema.define(version: 20161005011429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160930034811) do
     t.string  "external_id"
     t.text    "status_description"
     t.string  "vendor_external_id"
+    t.string  "recipient_id"
   end
 
   add_index "bloom_remit_txns", ["external_id"], name: "index_bloom_remit_txns_on_external_id", using: :btree
