@@ -8,6 +8,7 @@ module BloomRemit
         build_stubbed(:bloom_remit_dummy_user, bloom_remit_id: "sender-id")
       end
       let(:external_id) { SecureRandom.hex(12) }
+      let(:recipient_id) { SecureRandom.uuid }
       let(:txn) do
         build_stubbed(:bloom_remit_txn, {
           target_slug: "PLDT",
@@ -16,6 +17,7 @@ module BloomRemit
           account_name: "029925252",
           account_id: "12345678",
           external_id: external_id,
+          recipient_id: recipient_id,
         })
       end
       let(:callback_url) do
@@ -34,6 +36,7 @@ module BloomRemit
           target_slug: "PLDT",
           amount: BigDecimal.new(2000),
           client_external_id: external_id,
+          recipient_id: recipient_id,
         ).and_return(response)
 
         resulting_ctx = described_class.execute(txn: txn, client: client)

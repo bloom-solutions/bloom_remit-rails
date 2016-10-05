@@ -20,6 +20,7 @@ module BloomRemit
           target_slug: txn.target_slug,
           amount: txn.amount,
           client_external_id: txn.external_id,
+          recipient_id: txn.recipient_id,
         )
       end
 

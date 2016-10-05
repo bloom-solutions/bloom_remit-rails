@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- Send recipient_id when posting to BR
+
 ## [v0.12.0] - 2016-10-05
 ### Added
 - `CreateTxn` accepts `recipient_id`
