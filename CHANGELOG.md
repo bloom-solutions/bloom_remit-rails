@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [v0.12.1] - 2016-10-05
 ### Fixed
 - Send recipient_id when posting to BR
 
